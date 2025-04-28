@@ -1,19 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="screen.css">
-  </head>
-  <body>
-    <h1>Home</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-    <script src="index.js"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tailwind Dribbble Clone</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- Nav -->
+<div class="container mx-auto px-5 mt-6 mb-4">
+  <div class="flex justify-center items-center relative">
+
+    <ul class="flex gap-5 text-gray-700 text-sm font-medium">
+
+      <li class="relative">
+        <button id="popularDropdownBtn" class="flex items-center gap-1 text-gray-700 text-sm font-medium border border-gray-300 px-4 py-1 rounded-full hover:bg-gray-100 focus:outline-none">
+          Popular
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.293l3.7-4.063a.75.75 0 111.14.976l-4.25 4.66a.75.75 0 01-1.14 0l-4.25-4.66a.75.75 0 01.02-1.06z" />
+          </svg>
+        </button>
+        
+        
+
+        <!-- dropdown menu -->
+        <ul id="popularDropdownMenu" class="hidden absolute bg-white shadow rounded-md w-44 mt-2 text-gray-700">
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Trending</a></li>
+          <li><a class="block px-4 py-2 hover:bg-gray-100" href="#">New & Hot</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Most Liked</a></li>
+        </ul>
+      </li>
+
+      <!-- Static nav items -->
+      <li><a href="#" class="hover:underline">Discover</a></li>
+      <li><a href="#" class="hover:underline">Animation</a></li>
+      <li><a href="#" class="hover:underline">Branding</a></li>
+      <li><a href="#" class="hover:underline">Illustration</a></li>
+      <li><a href="#" class="hover:underline">Mobile</a></li>
+      <li><a href="#">Print</a></li>
+    </ul>
+
+    <button class="absolute right-0 flex items-center gap-2 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-1.5 rounded-full hover:bg-gray-100">
+      Filters
+    </button>
+    
+    
+
+  </div>
+</div>
+
+<!-- Cards -->
+<div class="container mx-auto px-5 pb-10">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow overflow-hidden hover:shadow-md flex flex-col">
+      <img src="2.PNG" alt="Image1" class="w-full">
+      <div class="flex justify-between p-4 text-sm text-gray-700">
+        <div class="flex items-center gap-2">
+          <img src="profile1.png" alt="Profile" class="rounded-full w-5 h-5">
+          <span class="font-semibold">Tom Johnson</span>
+          <span class="text-xs px-2 py-0.5 bg-gray-200 rounded font-bold">TEAM</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-500">
+          <img src="heart.png" class="w-4 h-4" alt="like"> 179
+          <img src="eye.png" class="w-4 h-4" alt="views"> 77.4k
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow hover:shadow-md flex flex-col overflow-hidden">
+      <img src="4.PNG" alt="Image2" class="w-full">
+      <div class="flex justify-between items-center p-4 text-gray-700 text-sm">
+        <div class="flex items-center gap-2">
+          <img src='profile2.png' class="rounded-full w-5 h-5" alt="Profile Icon">
+          <span class="font-semibold">Lili Jones</span>
+          <span class="text-xs px-2 bg-gray-200 rounded py-0.5 font-bold">PRO</span>
+        </div>
+        <div class="flex gap-2 text-gray-500">
+          <img src="heart.png" class="w-4 h-4"> 88
+          <img src="eye.png" class="w-4 h-4"> 4.2k
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow hover:shadow-md flex flex-col">
+      <img src="5.PNG" alt="Image3" class="w-full">
+      <div class="flex justify-between p-4 text-gray-700 text-sm">
+        <div class="flex items-center gap-2">
+          <img src="profile3.png" alt="Profile" class="w-5 h-5 rounded-full">
+          <span class="font-semibold">Roma Masat</span>
+          <span class="bg-gray-200 px-2 py-0.5 rounded text-xs font-bold">PRO</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-500">
+          <img src="heart.png" class="h-4 w-4" alt="heart"> 156
+          <img src="eye.png" class="h-4 w-4" alt="eye"> 77.1k
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white rounded-lg flex flex-col overflow-hidden shadow hover:shadow-lg transition">
+      <img src="6.PNG" class="w-full" alt="Image4">
+      <div class="flex justify-between p-4 text-gray-700 text-sm">
+        <div class="flex items-center gap-2">
+          <img src="profile4.png" class="w-5 h-5 rounded-full" alt="Profile">
+          <span class="font-semibold">Andrew Zimmrman</span>
+          <span class="bg-gray-200 rounded text-xs font-bold px-2 py-0.5">PRO</span>
+        </div>
+        <div class="flex gap-2 text-gray-500 items-center">
+          <img src="heart.png" class="w-4 h-4"> 55
+          <img src="eye.png" class="w-4 h-4"> 66.7k
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-white rounded-lg shadow flex flex-col overflow-hidden hover:shadow-lg">
+      <img src="7.PNG" alt="Image5" class="w-full">
+      <div class="flex justify-between p-4 text-gray-700 text-sm">
+        <div class="flex gap-2 items-center">
+          <img src="profile.png" class="w-5 h-5 rounded-full">
+          <span class="font-semibold">Jojo Bob</span>
+          <span class="text-xs font-bold bg-gray-200 px-2 py-0.5 rounded">TEAM</span>
+        </div>
+        <div class="flex items-center gap-2 text-gray-500">
+          <img src="heart.png" class="w-4 h-4"> 453
+          <img src="eye.png" class="w-4 h-4"> 1.7k
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-white shadow rounded-lg overflow-hidden hover:shadow-md flex flex-col">
+      <img src="9.PNG" alt="Image6" class="w-full">
+      <div class="flex justify-between p-4 text-gray-700 text-sm">
+        <div class="flex items-center gap-2">
+          <img src="profile5.png" class="rounded-full w-5 h-5" alt="profile">
+          <span class="font-semibold">Lee Jan</span>
+          <span class="px-2 py-0.5 bg-gray-200 text-xs rounded font-bold">PRO</span>
+        </div>
+        <div class="flex gap-2 text-gray-500 items-center">
+          <img src="heart.png" class="w-4 h-4"> 513
+          <img src="eye.png" class="w-4 h-4"> 143k
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Dropdown logic -->
+<script>
+  const dropdownBtn = document.getElementById('popularDropdownBtn')
+  const dropdownMenu = document.getElementById('popularDropdownMenu')
+
+  dropdownBtn.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden')
+  })
+
+  window.addEventListener('click', (e) => {
+    if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.add('hidden')
+    }
+  })
+</script>
+
+</body>
 </html>
